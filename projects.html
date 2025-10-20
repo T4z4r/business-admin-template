@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business Management System</title>
+    <title>Business Management System - Projects</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
@@ -15,10 +15,10 @@
         <nav id="sidebar" class="bg-dark text-white p-3">
             <h4 class="text-center mb-4">BMS Admin</h4>
             <ul class="nav flex-column">
-                <li class="nav-item"><a href="index.html" class="nav-link text-white active"><i class="bi bi-speedometer2 me-2"></i>Dashboard</a></li>
+                <li class="nav-item"><a href="index.html" class="nav-link text-white"><i class="bi bi-speedometer2 me-2"></i>Dashboard</a></li>
                 <li class="nav-item"><a href="employees.html" class="nav-link text-white"><i class="bi bi-people me-2"></i>Employees</a></li>
                 <li class="nav-item"><a href="departments.html" class="nav-link text-white"><i class="bi bi-diagram-3 me-2"></i>Departments</a></li>
-                <li class="nav-item"><a href="projects.html" class="nav-link text-white"><i class="bi bi-briefcase me-2"></i>Projects</a></li>
+                <li class="nav-item"><a href="projects.html" class="nav-link text-white active"><i class="bi bi-briefcase me-2"></i>Projects</a></li>
                 <li class="nav-item"><a href="sales.html" class="nav-link text-white"><i class="bi bi-cash-coin me-2"></i>Sales</a></li>
                 <li class="nav-item"><a href="inventory.html" class="nav-link text-white"><i class="bi bi-box-seam me-2"></i>Inventory</a></li>
                 <li class="nav-item"><a href="reports.html" class="nav-link text-white"><i class="bi bi-graph-up me-2"></i>Reports</a></li>
@@ -30,7 +30,7 @@
         <div id="page-content" class="w-100">
             <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm px-3">
                 <button class="btn btn-outline-secondary me-3" id="menu-toggle"><i class="bi bi-list"></i></button>
-                <h5 class="navbar-brand mb-0">Dashboard</h5>
+                <h5 class="navbar-brand mb-0">Projects</h5>
 
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item dropdown">
@@ -48,72 +48,52 @@
             </nav>
 
             <div class="container-fluid p-4">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h4>Project Management</h4>
+                    <button class="btn btn-primary"><i class="bi bi-plus-circle me-2"></i>Add Project</button>
+                </div>
+
                 <div class="row g-3">
-                    <div class="col-md-3">
+                    <div class="col-md-6">
                         <div class="card shadow-sm border-0">
-                            <div class="card-body text-center">
-                                <h6>Total Employees</h6>
-                                <h3>45</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card shadow-sm border-0">
-                            <div class="card-body text-center">
-                                <h6>Total Departments</h6>
-                                <h3>8</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card shadow-sm border-0">
-                            <div class="card-body text-center">
-                                <h6>Active Projects</h6>
-                                <h3>12</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="card shadow-sm border-0">
-                            <div class="card-body text-center">
-                                <h6>Monthly Revenue</h6>
-                                <h3>$18,230</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row mt-4">
-                    <div class="col-lg-8">
-                        <div class="card shadow-sm border-0">
-                            <div class="card-header bg-white"><strong>Performance Overview</strong></div>
                             <div class="card-body">
-                                <canvas id="chartPerformance"></canvas>
+                                <h6>Website Redesign</h6>
+                                <p class="text-muted">Client: ABC Corp</p>
+                                <div class="progress mb-2">
+                                    <div class="progress-bar bg-success" style="width: 75%"></div>
+                                </div>
+                                <small class="text-muted">75% Complete</small>
+                                <div class="mt-2">
+                                    <button class="btn btn-outline-primary btn-sm me-1">View</button>
+                                    <button class="btn btn-outline-secondary btn-sm">Edit</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-md-6">
                         <div class="card shadow-sm border-0">
-                            <div class="card-header bg-white"><strong>Recent Activities</strong></div>
                             <div class="card-body">
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">John added a new project.</li>
-                                    <li class="list-group-item">New employee registered.</li>
-                                    <li class="list-group-item">Sales report generated.</li>
-                                    <li class="list-group-item">Department budget updated.</li>
-                                </ul>
+                                <h6>Mobile App Development</h6>
+                                <p class="text-muted">Client: XYZ Ltd</p>
+                                <div class="progress mb-2">
+                                    <div class="progress-bar bg-warning" style="width: 50%"></div>
+                                </div>
+                                <small class="text-muted">50% Complete</small>
+                                <div class="mt-2">
+                                    <button class="btn btn-outline-primary btn-sm me-1">View</button>
+                                    <button class="btn btn-outline-secondary btn-sm">Edit</button>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <!-- Add more project cards as needed -->
                 </div>
-
             </div>
         </div>
     </div>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 </html>
