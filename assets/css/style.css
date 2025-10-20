@@ -31,7 +31,7 @@
   --accent-color: #8FC5D8;
   --sidebar-bg: linear-gradient(180deg, #1A2E2E 0%, #2D4F4F 100%);
   --text-light: #B8D4D8;
-  --hover-color: rgba(91, 163, 184, 0.2);
+  --hover-color: rgba(91, 163, 184, 0.3);
   --card-bg: #1E293B;
   --border-color: #334155;
   --success-color: #4ADE80;
@@ -44,7 +44,7 @@
   --text-primary: #E2E8F0;
   --text-secondary: #94A3B8;
   --text-muted: #64748B;
-  --shadow-color: rgba(0, 0, 0, 0.3);
+  --shadow-color: rgba(0, 0, 0, 0.4);
   --navbar-bg: #1E293B;
 }
 
@@ -252,6 +252,224 @@ h4, h5, h6 {
 
 .theme-toggle.active i {
   transform: rotate(180deg);
+}
+
+/* Dark Mode Dropdown Fixes */
+[data-theme="dark"] .dropdown-menu {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+[data-theme="dark"] .dropdown-item {
+  color: var(--text-primary);
+  transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .dropdown-item:hover {
+  background-color: var(--hover-color);
+  color: var(--text-light);
+}
+
+[data-theme="dark"] .dropdown-divider {
+  border-top-color: var(--border-color);
+}
+
+[data-theme="dark"] .dropdown-item.text-danger {
+  color: var(--danger-color) !important;
+}
+
+[data-theme="dark"] .dropdown-item.text-danger:hover {
+  background-color: rgba(239, 68, 68, 0.1);
+  color: var(--danger-color) !important;
+}
+
+/* Dark Mode Form Improvements */
+[data-theme="dark"] .form-control {
+  background-color: var(--bg-secondary);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .form-control:focus {
+  background-color: var(--bg-secondary);
+  border-color: var(--secondary-color);
+  color: var(--text-primary);
+  box-shadow: 0 0 0 0.2rem rgba(91, 163, 184, 0.3);
+}
+
+[data-theme="dark"] .form-control::placeholder {
+  color: var(--text-muted);
+}
+
+[data-theme="dark"] .form-select {
+  background-color: var(--bg-secondary);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .form-select:focus {
+  background-color: var(--bg-secondary);
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 0.2rem rgba(91, 163, 184, 0.3);
+}
+
+/* Dark Mode Table Improvements */
+[data-theme="dark"] .table {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(30, 41, 59, 0.5);
+}
+
+[data-theme="dark"] .table-hover tbody tr:hover {
+  background-color: var(--hover-color);
+}
+
+/* Dark Mode Navbar Dropdown */
+[data-theme="dark"] .navbar {
+  background-color: var(--navbar-bg) !important;
+  border-bottom: 1px solid var(--border-color);
+}
+
+[data-theme="dark"] .navbar-brand {
+  color: var(--text-primary) !important;
+}
+
+[data-theme="dark"] .navbar-nav .nav-link {
+  color: var(--text-primary) !important;
+  transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .navbar-nav .nav-link:hover {
+  color: var(--text-light) !important;
+}
+
+/* Dark Mode Button Improvements */
+[data-theme="dark"] .btn-outline-primary:hover {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--text-light);
+}
+
+[data-theme="dark"] .btn-outline-secondary:hover {
+  background-color: var(--secondary-color);
+  border-color: var(--secondary-color);
+  color: var(--text-light);
+}
+
+/* Dark Mode List Group */
+[data-theme="dark"] .list-group-item {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .list-group-item:hover {
+  background-color: var(--hover-color);
+}
+
+/* Dark Mode Modal */
+[data-theme="dark"] .modal-content {
+  background-color: var(--bg-secondary);
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .modal-header,
+[data-theme="dark"] .modal-footer {
+  border-color: var(--border-color);
+}
+
+[data-theme="dark"] .modal-title {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .close {
+  color: var(--text-primary);
+  text-shadow: none;
+}
+
+/* Dark Mode Progress Bars */
+[data-theme="dark"] .progress {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+}
+
+/* Dark Mode Badge Improvements */
+[data-theme="dark"] .badge {
+  color: var(--text-light);
+}
+
+/* Dark Mode Alert Improvements */
+[data-theme="dark"] .alert {
+  background-color: var(--bg-secondary);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+/* Dark Mode Card Shadow Enhancement */
+[data-theme="dark"] .card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 2px 8px var(--shadow-color);
+}
+
+/* Dark Mode Text Color Fixes */
+[data-theme="dark"] h1, [data-theme="dark"] h2, [data-theme="dark"] h3,
+[data-theme="dark"] h4, [data-theme="dark"] h5, [data-theme="dark"] h6 {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] p, [data-theme="dark"] span, [data-theme="dark"] div {
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] small {
+  color: var(--text-muted) !important;
+}
+
+[data-theme="dark"] .text-muted {
+  color: var(--text-muted) !important;
+}
+
+/* Dark Mode Link Colors */
+[data-theme="dark"] a {
+  color: var(--primary-color);
+  transition: color 0.3s ease;
+}
+
+[data-theme="dark"] a:hover {
+  color: var(--secondary-color);
+}
+
+/* Dark Mode Input Group */
+[data-theme="dark"] .input-group-text {
+  background-color: var(--bg-primary);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+/* Dark Mode Custom Checkbox/Radio */
+[data-theme="dark"] .form-check-input:checked {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+[data-theme="dark"] .form-check-label {
+  color: var(--text-primary);
+}
+
+/* Dark Mode Pagination */
+[data-theme="dark"] .page-link {
+  background-color: var(--bg-secondary);
+  border-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+[data-theme="dark"] .page-item.active .page-link {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
 }
 
 /* Smooth transitions for theme switching */

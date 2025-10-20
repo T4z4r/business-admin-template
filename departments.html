@@ -53,40 +53,364 @@
             </nav>
 
             <div class="container-fluid p-4">
-                <div class="d-flex justify-content-between align-items-center mb-4">
-                    <h4>Department Management</h4>
-                    <button class="btn btn-primary"><i class="bi bi-plus-circle me-2"></i>Add Department</button>
+                <!-- Department Statistics -->
+                <div class="row g-3 mb-4">
+                    <div class="col-md-3">
+                        <div class="card shadow-sm border-0">
+                            <div class="card-body text-center">
+                                <h6>Total Departments</h6>
+                                <h3 class="text-primary">12</h3>
+                                <small class="text-muted">Across 3 locations</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card shadow-sm border-0">
+                            <div class="card-body text-center">
+                                <h6>Total Headcount</h6>
+                                <h3 class="text-info">127</h3>
+                                <small class="text-muted">+8 this month</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card shadow-sm border-0">
+                            <div class="card-body text-center">
+                                <h6>Avg. Dept. Size</h6>
+                                <h3 class="text-warning">10.6</h3>
+                                <small class="text-muted">Employees per dept</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card shadow-sm border-0">
+                            <div class="card-body text-center">
+                                <h6>Dept. Budget Utilization</h6>
+                                <h3 class="text-success">87%</h3>
+                                <small class="text-muted">This quarter</small>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="row g-3">
-                    <div class="col-md-4">
-                        <div class="card shadow-sm border-0">
-                            <div class="card-body text-center">
-                                <h6>IT Department</h6>
-                                <p class="text-muted">12 Employees</p>
-                                <button class="btn btn-outline-primary btn-sm">View Details</button>
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h4>Department Management</h4>
+                    <div>
+                        <button class="btn btn-success me-2">
+                            <i class="bi bi-file-earmark-spreadsheet me-2"></i>Export Report
+                        </button>
+                        <button class="btn btn-primary">
+                            <i class="bi bi-plus-circle me-2"></i>Add New Department
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Department Cards -->
+                <div class="row g-3 mb-4">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card shadow-sm border-0 h-100">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="bg-primary rounded p-2 me-3">
+                                        <i class="bi bi-code-slash text-white fs-5"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="mb-0">Information Technology</h6>
+                                        <small class="text-muted">Led by: Jennifer Walsh</small>
+                                    </div>
+                                </div>
+                                <div class="row g-2 mb-3">
+                                    <div class="col-6">
+                                        <small class="text-muted d-block">Employees</small>
+                                        <strong class="text-primary">18</strong>
+                                    </div>
+                                    <div class="col-6">
+                                        <small class="text-muted d-block">Budget</small>
+                                        <strong class="text-success">$450K</strong>
+                                    </div>
+                                </div>
+                                <div class="progress mb-3" style="height: 6px;">
+                                    <div class="progress-bar bg-primary" style="width: 85%"></div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <button class="btn btn-outline-primary btn-sm">
+                                        <i class="bi bi-eye me-1"></i>View Details
+                                    </button>
+                                    <button class="btn btn-outline-secondary btn-sm">
+                                        <i class="bi bi-graph-up me-1"></i>Analytics
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="card shadow-sm border-0">
-                            <div class="card-body text-center">
-                                <h6>HR Department</h6>
-                                <p class="text-muted">8 Employees</p>
-                                <button class="btn btn-outline-primary btn-sm">View Details</button>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card shadow-sm border-0 h-100">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="bg-info rounded p-2 me-3">
+                                        <i class="bi bi-currency-dollar text-white fs-5"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="mb-0">Sales & Marketing</h6>
+                                        <small class="text-muted">Led by: Robert Martinez</small>
+                                    </div>
+                                </div>
+                                <div class="row g-2 mb-3">
+                                    <div class="col-6">
+                                        <small class="text-muted d-block">Employees</small>
+                                        <strong class="text-primary">24</strong>
+                                    </div>
+                                    <div class="col-6">
+                                        <small class="text-muted d-block">Target</small>
+                                        <strong class="text-success">$1.2M</strong>
+                                    </div>
+                                </div>
+                                <div class="progress mb-3" style="height: 6px;">
+                                    <div class="progress-bar bg-info" style="width: 92%"></div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <button class="btn btn-outline-primary btn-sm">
+                                        <i class="bi bi-eye me-1"></i>View Details
+                                    </button>
+                                    <button class="btn btn-outline-secondary btn-sm">
+                                        <i class="bi bi-graph-up me-1"></i>Analytics
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="card shadow-sm border-0">
-                            <div class="card-body text-center">
-                                <h6>Finance Department</h6>
-                                <p class="text-muted">6 Employees</p>
-                                <button class="btn btn-outline-primary btn-sm">View Details</button>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card shadow-sm border-0 h-100">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="bg-success rounded p-2 me-3">
+                                        <i class="bi bi-people text-white fs-5"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="mb-0">Human Resources</h6>
+                                        <small class="text-muted">Led by: Amanda Foster</small>
+                                    </div>
+                                </div>
+                                <div class="row g-2 mb-3">
+                                    <div class="col-6">
+                                        <small class="text-muted d-block">Employees</small>
+                                        <strong class="text-primary">9</strong>
+                                    </div>
+                                    <div class="col-6">
+                                        <small class="text-muted d-block">Turnover</small>
+                                        <strong class="text-success">3.2%</strong>
+                                    </div>
+                                </div>
+                                <div class="progress mb-3" style="height: 6px;">
+                                    <div class="progress-bar bg-success" style="width: 78%"></div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <button class="btn btn-outline-primary btn-sm">
+                                        <i class="bi bi-eye me-1"></i>View Details
+                                    </button>
+                                    <button class="btn btn-outline-secondary btn-sm">
+                                        <i class="bi bi-graph-up me-1"></i>Analytics
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <!-- Add more department cards as needed -->
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card shadow-sm border-0 h-100">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="bg-warning rounded p-2 me-3">
+                                        <i class="bi bi-calculator text-white fs-5"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="mb-0">Finance & Accounting</h6>
+                                        <small class="text-muted">Led by: David Kim</small>
+                                    </div>
+                                </div>
+                                <div class="row g-2 mb-3">
+                                    <div class="col-6">
+                                        <small class="text-muted d-block">Employees</small>
+                                        <strong class="text-primary">15</strong>
+                                    </div>
+                                    <div class="col-6">
+                                        <small class="text-muted d-block">Budget Var.</small>
+                                        <strong class="text-success">+2.1%</strong>
+                                    </div>
+                                </div>
+                                <div class="progress mb-3" style="height: 6px;">
+                                    <div class="progress-bar bg-warning" style="width: 88%"></div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <button class="btn btn-outline-primary btn-sm">
+                                        <i class="bi bi-eye me-1"></i>View Details
+                                    </button>
+                                    <button class="btn btn-outline-secondary btn-sm">
+                                        <i class="bi bi-graph-up me-1"></i>Analytics
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card shadow-sm border-0 h-100">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="bg-danger rounded p-2 me-3">
+                                        <i class="bi bi-truck text-white fs-5"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="mb-0">Operations</h6>
+                                        <small class="text-muted">Led by: Maria Rodriguez</small>
+                                    </div>
+                                </div>
+                                <div class="row g-2 mb-3">
+                                    <div class="col-6">
+                                        <small class="text-muted d-block">Employees</small>
+                                        <strong class="text-primary">32</strong>
+                                    </div>
+                                    <div class="col-6">
+                                        <small class="text-muted d-block">Efficiency</small>
+                                        <strong class="text-success">94.2%</strong>
+                                    </div>
+                                </div>
+                                <div class="progress mb-3" style="height: 6px;">
+                                    <div class="progress-bar bg-danger" style="width: 94%"></div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <button class="btn btn-outline-primary btn-sm">
+                                        <i class="bi bi-eye me-1"></i>View Details
+                                    </button>
+                                    <button class="btn btn-outline-secondary btn-sm">
+                                        <i class="bi bi-graph-up me-1"></i>Analytics
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card shadow-sm border-0 h-100">
+                            <div class="card-body">
+                                <div class="d-flex align-items-center mb-3">
+                                    <div class="bg-secondary rounded p-2 me-3">
+                                        <i class="bi bi-megaphone text-white fs-5"></i>
+                                    </div>
+                                    <div>
+                                        <h6 class="mb-0">Customer Service</h6>
+                                        <small class="text-muted">Led by: Lisa Thompson</small>
+                                    </div>
+                                </div>
+                                <div class="row g-2 mb-3">
+                                    <div class="col-6">
+                                        <small class="text-muted d-block">Employees</small>
+                                        <strong class="text-primary">29</strong>
+                                    </div>
+                                    <div class="col-6">
+                                        <small class="text-muted d-block">Satisfaction</small>
+                                        <strong class="text-success">96.8%</strong>
+                                    </div>
+                                </div>
+                                <div class="progress mb-3" style="height: 6px;">
+                                    <div class="progress-bar bg-secondary" style="width: 97%"></div>
+                                </div>
+                                <div class="d-flex justify-content-between">
+                                    <button class="btn btn-outline-primary btn-sm">
+                                        <i class="bi bi-eye me-1"></i>View Details
+                                    </button>
+                                    <button class="btn btn-outline-secondary btn-sm">
+                                        <i class="bi bi-graph-up me-1"></i>Analytics
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Department Performance Table -->
+                <div class="card shadow-sm border-0">
+                    <div class="card-header bg-white">
+                        <strong>Department Performance Summary</strong>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead class="table-light">
+                                    <tr>
+                                        <th>Department</th>
+                                        <th>Head</th>
+                                        <th>Employees</th>
+                                        <th>Budget (Q4)</th>
+                                        <th>Spent</th>
+                                        <th>Performance</th>
+                                        <th>Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <div class="bg-primary rounded p-1 me-2" style="width: 24px; height: 24px;"></div>
+                                                <strong>Information Technology</strong>
+                                            </div>
+                                        </td>
+                                        <td>Jennifer Walsh</td>
+                                        <td>18</td>
+                                        <td>$450,000</td>
+                                        <td>$382,500</td>
+                                        <td>
+                                            <div class="progress" style="width: 60px;">
+                                                <div class="progress-bar bg-success" style="width: 85%"></div>
+                                            </div>
+                                            <small class="ms-1">85%</small>
+                                        </td>
+                                        <td><span class="badge bg-success">Excellent</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <div class="bg-info rounded p-1 me-2" style="width: 24px; height: 24px;"></div>
+                                                <strong>Sales & Marketing</strong>
+                                            </div>
+                                        </td>
+                                        <td>Robert Martinez</td>
+                                        <td>24</td>
+                                        <td>$320,000</td>
+                                        <td>$294,400</td>
+                                        <td>
+                                            <div class="progress" style="width: 60px;">
+                                                <div class="progress-bar bg-info" style="width: 92%"></div>
+                                            </div>
+                                            <small class="ms-1">92%</small>
+                                        </td>
+                                        <td><span class="badge bg-success">Excellent</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="d-flex align-items-center">
+                                                <div class="bg-success rounded p-1 me-2" style="width: 24px; height: 24px;"></div>
+                                                <strong>Human Resources</strong>
+                                            </div>
+                                        </td>
+                                        <td>Amanda Foster</td>
+                                        <td>9</td>
+                                        <td>$180,000</td>
+                                        <td>$140,400</td>
+                                        <td>
+                                            <div class="progress" style="width: 60px;">
+                                                <div class="progress-bar bg-warning" style="width: 78%"></div>
+                                            </div>
+                                            <small class="ms-1">78%</small>
+                                        </td>
+                                        <td><span class="badge bg-warning">Good</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -95,5 +419,12 @@
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+        // Apply theme immediately to prevent flash
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
 </body>
 </html>

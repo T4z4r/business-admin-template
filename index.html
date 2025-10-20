@@ -13,15 +13,16 @@
     <!-- Sidebar -->
     <div class="d-flex" id="wrapper">
         <nav id="sidebar" class="bg-dark text-white p-3">
-            <h4 class="text-center mb-4">BMS Admin</h4>
+            <h4 class="text-center mb-4">Shop Manager</h4>
             <ul class="nav flex-column">
                 <li class="nav-item"><a href="index.html" class="nav-link text-white active"><i class="bi bi-speedometer2 me-2"></i>Dashboard</a></li>
-                <li class="nav-item"><a href="employees.html" class="nav-link text-white"><i class="bi bi-people me-2"></i>Employees</a></li>
-                <li class="nav-item"><a href="departments.html" class="nav-link text-white"><i class="bi bi-diagram-3 me-2"></i>Departments</a></li>
-                <li class="nav-item"><a href="projects.html" class="nav-link text-white"><i class="bi bi-briefcase me-2"></i>Projects</a></li>
-                <li class="nav-item"><a href="sales.html" class="nav-link text-white"><i class="bi bi-cash-coin me-2"></i>Sales</a></li>
+                <li class="nav-item"><a href="pos.html" class="nav-link text-white"><i class="bi bi-cash-register me-2"></i>Point of Sale</a></li>
                 <li class="nav-item"><a href="inventory.html" class="nav-link text-white"><i class="bi bi-box-seam me-2"></i>Inventory</a></li>
-                <li class="nav-item"><a href="reports.html" class="nav-link text-white"><i class="bi bi-graph-up me-2"></i>Reports</a></li>
+                <li class="nav-item"><a href="customers.html" class="nav-link text-white"><i class="bi bi-people me-2"></i>Customers</a></li>
+                <li class="nav-item"><a href="sales.html" class="nav-link text-white"><i class="bi bi-graph-up me-2"></i>Sales</a></li>
+                <li class="nav-item"><a href="employees.html" class="nav-link text-white"><i class="bi bi-person-badge me-2"></i>Staff</a></li>
+                <li class="nav-item"><a href="suppliers.html" class="nav-link text-white"><i class="bi bi-truck me-2"></i>Suppliers</a></li>
+                <li class="nav-item"><a href="reports.html" class="nav-link text-white"><i class="bi bi-file-bar-graph me-2"></i>Reports</a></li>
                 <li class="nav-item mt-3 border-top pt-2"><a href="settings.html" class="nav-link text-white"><i class="bi bi-gear me-2"></i>Settings</a></li>
             </ul>
         </nav>
@@ -30,7 +31,7 @@
         <div id="page-content" class="w-100">
             <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm px-3">
                 <button class="btn btn-outline-secondary me-3" id="menu-toggle"><i class="bi bi-list"></i></button>
-                <h5 class="navbar-brand mb-0">Dashboard</h5>
+                <h5 class="navbar-brand mb-0">Shop Dashboard</h5>
 
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
@@ -40,7 +41,7 @@
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">
-                            <i class="bi bi-person-circle"></i> Admin
+                            <i class="bi bi-person-circle"></i> Shop Owner
                         </a>
                         <ul class="dropdown-menu dropdown-menu-end">
                             <li><a class="dropdown-item" href="#">Profile</a></li>
@@ -53,45 +54,81 @@
             </nav>
 
             <div class="container-fluid p-4">
-                <div class="row g-3">
+                <!-- Key Performance Indicators -->
+                <div class="row g-3 mb-4">
                     <div class="col-md-3">
                         <div class="card shadow-sm border-0">
                             <div class="card-body text-center">
-                                <h6>Total Employees</h6>
-                                <h3>45</h3>
+                                <div class="d-flex align-items-center justify-content-center mb-2">
+                                    <i class="bi bi-people-fill fs-4 me-2 text-primary"></i>
+                                    <h6 class="mb-0">Total Employees</h6>
+                                </div>
+                                <h3 class="text-primary mb-1">127</h3>
+                                <small class="text-success">
+                                    <i class="bi bi-arrow-up"></i> +5.2% this month
+                                </small>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-3">
                         <div class="card shadow-sm border-0">
                             <div class="card-body text-center">
-                                <h6>Total Departments</h6>
-                                <h3>8</h3>
+                                <div class="d-flex align-items-center justify-content-center mb-2">
+                                    <i class="bi bi-building fs-4 me-2 text-info"></i>
+                                    <h6 class="mb-0">Active Departments</h6>
+                                </div>
+                                <h3 class="text-info mb-1">12</h3>
+                                <small class="text-muted">Across 3 locations</small>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-3">
                         <div class="card shadow-sm border-0">
                             <div class="card-body text-center">
-                                <h6>Active Projects</h6>
-                                <h3>12</h3>
+                                <div class="d-flex align-items-center justify-content-center mb-2">
+                                    <i class="bi bi-briefcase fs-4 me-2 text-warning"></i>
+                                    <h6 class="mb-0">Active Projects</h6>
+                                </div>
+                                <h3 class="text-warning mb-1">24</h3>
+                                <small class="text-success">
+                                    <i class="bi bi-check-circle"></i> 18 on track
+                                </small>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-3">
                         <div class="card shadow-sm border-0">
                             <div class="card-body text-center">
-                                <h6>Monthly Revenue</h6>
-                                <h3>$18,230</h3>
+                                <div class="d-flex align-items-center justify-content-center mb-2">
+                                    <i class="bi bi-currency-dollar fs-4 me-2 text-success"></i>
+                                    <h6 class="mb-0">Monthly Revenue</h6>
+                                </div>
+                                <h3 class="text-success mb-1">$284,750</h3>
+                                <small class="text-success">
+                                    <i class="bi bi-arrow-up"></i> +12.5% vs last month
+                                </small>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="row mt-4">
+                <!-- Charts and Analytics Row -->
+                <div class="row mb-4">
                     <div class="col-lg-8">
                         <div class="card shadow-sm border-0">
-                            <div class="card-header bg-white"><strong>Performance Overview</strong></div>
+                            <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                                <strong>Revenue Trend Analysis</strong>
+                                <div class="dropdown">
+                                    <button class="btn btn-sm btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                        Last 6 Months
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Last 3 Months</a></li>
+                                        <li><a class="dropdown-item" href="#">Last 6 Months</a></li>
+                                        <li><a class="dropdown-item" href="#">Last Year</a></li>
+                                    </ul>
+                                </div>
+                            </div>
                             <div class="card-body">
                                 <canvas id="chartPerformance"></canvas>
                             </div>
@@ -99,19 +136,112 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="card shadow-sm border-0">
-                            <div class="card-header bg-white"><strong>Recent Activities</strong></div>
-                            <div class="card-body">
+                            <div class="card-header bg-white">
+                                <strong>Recent Business Activities</strong>
+                            </div>
+                            <div class="card-body p-0">
                                 <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">John added a new project.</li>
-                                    <li class="list-group-item">New employee registered.</li>
-                                    <li class="list-group-item">Sales report generated.</li>
-                                    <li class="list-group-item">Department budget updated.</li>
+                                    <li class="list-group-item d-flex align-items-center">
+                                        <div class="badge bg-success me-3">
+                                            <i class="bi bi-check-circle"></i>
+                                        </div>
+                                        <div>
+                                            <strong>Q4 Budget Approved</strong><br>
+                                            <small class="text-muted">Finance Team • 2 hours ago</small>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item d-flex align-items-center">
+                                        <div class="badge bg-primary me-3">
+                                            <i class="bi bi-person-plus"></i>
+                                        </div>
+                                        <div>
+                                            <strong>New Employee Onboarded</strong><br>
+                                            <small class="text-muted">HR Department • 4 hours ago</small>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item d-flex align-items-center">
+                                        <div class="badge bg-warning me-3">
+                                            <i class="bi bi-exclamation-triangle"></i>
+                                        </div>
+                                        <div>
+                                            <strong>Project Deadline Alert</strong><br>
+                                            <small class="text-muted">Project Alpha • 6 hours ago</small>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item d-flex align-items-center">
+                                        <div class="badge bg-info me-3">
+                                            <i class="bi bi-graph-up"></i>
+                                        </div>
+                                        <div>
+                                            <strong>Monthly Sales Report</strong><br>
+                                            <small class="text-muted">Sales Team • 1 day ago</small>
+                                        </div>
+                                    </li>
+                                    <li class="list-group-item d-flex align-items-center">
+                                        <div class="badge bg-success me-3">
+                                            <i class="bi bi-trophy"></i>
+                                        </div>
+                                        <div>
+                                            <strong>Deal Closed: $45,000</strong><br>
+                                            <small class="text-muted">Sales Team • 1 day ago</small>
+                                        </div>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
 
+                <!-- Department Performance Overview -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card shadow-sm border-0">
+                            <div class="card-header bg-white">
+                                <strong>Department Performance Overview</strong>
+                            </div>
+                            <div class="card-body">
+                                <div class="row g-3">
+                                    <div class="col-md-4">
+                                        <div class="d-flex justify-content-between align-items-center p-3 bg-light rounded">
+                                            <div>
+                                                <h6 class="mb-1">Sales Department</h6>
+                                                <small class="text-muted">Target: $250K</small>
+                                            </div>
+                                            <div class="text-end">
+                                                <h5 class="text-success mb-0">$284K</h5>
+                                                <small class="text-success">+13.6%</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="d-flex justify-content-between align-items-center p-3 bg-light rounded">
+                                            <div>
+                                                <h6 class="mb-1">IT Department</h6>
+                                                <small class="text-muted">Projects: 8 active</small>
+                                            </div>
+                                            <div class="text-end">
+                                                <h5 class="text-info mb-0">6</h5>
+                                                <small class="text-success">On Track</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="d-flex justify-content-between align-items-center p-3 bg-light rounded">
+                                            <div>
+                                                <h6 class="mb-1">HR Department</h6>
+                                                <small class="text-muted">Turnover Rate</small>
+                                            </div>
+                                            <div class="text-end">
+                                                <h5 class="text-warning mb-0">3.2%</h5>
+                                                <small class="text-success">-0.8%</small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -120,5 +250,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+        // Apply theme immediately to prevent flash
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
 </body>
 </html>

@@ -53,79 +53,315 @@
             </nav>
 
             <div class="container-fluid p-4">
-                <div class="d-flex justify-content-between align-items-center mb-4">
-                    <h4>Reports & Analytics</h4>
-                    <button class="btn btn-primary"><i class="bi bi-download me-2"></i>Generate Report</button>
-                </div>
-
+                <!-- Report Generation Tools -->
                 <div class="row g-3 mb-4">
-                    <div class="col-md-6">
+                    <div class="col-md-3">
                         <div class="card shadow-sm border-0">
-                            <div class="card-header bg-white"><strong>Sales Report</strong></div>
-                            <div class="card-body">
-                                <canvas id="salesChart"></canvas>
+                            <div class="card-body text-center">
+                                <div class="d-flex align-items-center justify-content-center mb-2">
+                                    <i class="bi bi-bar-chart-line fs-4 me-2 text-primary"></i>
+                                    <h6 class="mb-0">Revenue Analytics</h6>
+                                </div>
+                                <h3 class="text-primary mb-1">$284,750</h3>
+                                <small class="text-success">
+                                    <i class="bi bi-arrow-up"></i> +12.5% growth
+                                </small>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-3">
                         <div class="card shadow-sm border-0">
-                            <div class="card-header bg-white"><strong>Employee Performance</strong></div>
-                            <div class="card-body">
-                                <canvas id="performanceChart"></canvas>
+                            <div class="card-body text-center">
+                                <div class="d-flex align-items-center justify-content-center mb-2">
+                                    <i class="bi bi-people fs-4 me-2 text-info"></i>
+                                    <h6 class="mb-0">Team Performance</h6>
+                                </div>
+                                <h3 class="text-info mb-1">94.2%</h3>
+                                <small class="text-muted">Productivity score</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card shadow-sm border-0">
+                            <div class="card-body text-center">
+                                <div class="d-flex align-items-center justify-content-center mb-2">
+                                    <i class="bi bi-graph-up fs-4 me-2 text-warning"></i>
+                                    <h6 class="mb-0">Project Success</h6>
+                                </div>
+                                <h3 class="text-warning mb-1">87%</h3>
+                                <small class="text-muted">On-time delivery</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card shadow-sm border-0">
+                            <div class="card-body text-center">
+                                <div class="d-flex align-items-center justify-content-center mb-2">
+                                    <i class="bi bi-star fs-4 me-2 text-success"></i>
+                                    <h6 class="mb-0">Client Satisfaction</h6>
+                                </div>
+                                <h3 class="text-success mb-1">96.8%</h3>
+                                <small class="text-muted">NPS Score: 8.7</small>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="row g-3">
-                    <div class="col-md-4">
+                <div class="d-flex justify-content-between align-items-center mb-4">
+                    <h4>Business Intelligence Dashboard</h4>
+                    <div>
+                        <div class="btn-group me-2">
+                            <button class="btn btn-outline-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                <i class="bi bi-calendar me-2"></i>Time Period
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Last 7 Days</a></li>
+                                <li><a class="dropdown-item" href="#">Last 30 Days</a></li>
+                                <li><a class="dropdown-item active" href="#">Last 3 Months</a></li>
+                                <li><a class="dropdown-item" href="#">Last Year</a></li>
+                            </ul>
+                        </div>
+                        <button class="btn btn-success me-2">
+                            <i class="bi bi-download me-2"></i>Export Reports
+                        </button>
+                        <button class="btn btn-primary">
+                            <i class="bi bi-plus-circle me-2"></i>Custom Report
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Analytics Charts -->
+                <div class="row mb-4">
+                    <div class="col-lg-8">
                         <div class="card shadow-sm border-0">
-                            <div class="card-body text-center">
-                                <h6>Monthly Revenue</h6>
-                                <h3>$18,230</h3>
-                                <small class="text-success">+12% from last month</small>
+                            <div class="card-header bg-white d-flex justify-content-between align-items-center">
+                                <strong>Revenue Trend Analysis</strong>
+                                <div class="d-flex gap-2">
+                                    <button class="btn btn-sm btn-outline-primary active">Monthly</button>
+                                    <button class="btn btn-sm btn-outline-secondary">Quarterly</button>
+                                    <button class="btn btn-sm btn-outline-secondary">Yearly</button>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <canvas id="salesChart" height="300"></canvas>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-lg-4">
                         <div class="card shadow-sm border-0">
-                            <div class="card-body text-center">
-                                <h6>Active Projects</h6>
-                                <h3>12</h3>
-                                <small class="text-info">3 completed this month</small>
+                            <div class="card-header bg-white">
+                                <strong>Department Performance</strong>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card shadow-sm border-0">
-                            <div class="card-body text-center">
-                                <h6>Customer Satisfaction</h6>
-                                <h3>94%</h3>
-                                <small class="text-warning">+2% from last month</small>
+                            <div class="card-body">
+                                <canvas id="performanceChart" height="300"></canvas>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="card shadow-sm border-0 mt-4">
+                <!-- Key Business Metrics -->
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <div class="card shadow-sm border-0">
+                            <div class="card-header bg-white">
+                                <strong>Key Performance Indicators (KPIs)</strong>
+                            </div>
+                            <div class="card-body">
+                                <div class="row g-3">
+                                    <div class="col-md-3">
+                                        <div class="kpi-card p-3 border rounded">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <i class="bi bi-currency-dollar text-success fs-5 me-2"></i>
+                                                <span class="text-muted">Revenue per Employee</span>
+                                            </div>
+                                            <h4 class="text-success mb-1">$18,340</h4>
+                                            <small class="text-success">
+                                                <i class="bi bi-arrow-up"></i> +8.2% vs Q3
+                                            </small>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="kpi-card p-3 border rounded">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <i class="bi bi-clock text-warning fs-5 me-2"></i>
+                                                <span class="text-muted">Avg. Project Duration</span>
+                                            </div>
+                                            <h4 class="text-warning mb-1">4.2 months</h4>
+                                            <small class="text-muted">
+                                                <i class="bi bi-dash"></i> -0.3 months vs Q3
+                                            </small>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="kpi-card p-3 border rounded">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <i class="bi bi-person-check text-info fs-5 me-2"></i>
+                                                <span class="text-muted">Employee Retention</span>
+                                            </div>
+                                            <h4 class="text-info mb-1">94.8%</h4>
+                                            <small class="text-success">
+                                                <i class="bi bi-arrow-up"></i> +2.1% vs Q3
+                                            </small>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="kpi-card p-3 border rounded">
+                                            <div class="d-flex align-items-center mb-2">
+                                                <i class="bi bi-graph-up text-primary fs-5 me-2"></i>
+                                                <span class="text-muted">Customer Acquisition</span>
+                                            </div>
+                                            <h4 class="text-primary mb-1">$2,340</h4>
+                                            <small class="text-success">
+                                                <i class="bi bi-arrow-up"></i> +15.3% vs Q3
+                                            </small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Report Categories -->
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <div class="card shadow-sm border-0">
+                            <div class="card-header bg-white">
+                                <strong>Financial Reports</strong>
+                            </div>
+                            <div class="card-body">
+                                <div class="list-group list-group-flush">
+                                    <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <strong>Monthly P&L Statement</strong><br>
+                                            <small class="text-muted">Profit & Loss Analysis</small>
+                                        </div>
+                                        <div class="text-end">
+                                            <button class="btn btn-sm btn-outline-primary">View</button>
+                                            <small class="text-muted d-block">Dec 2023</small>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <strong>Cash Flow Forecast</strong><br>
+                                            <small class="text-muted">12-month projection</small>
+                                        </div>
+                                        <div class="text-end">
+                                            <button class="btn btn-sm btn-outline-primary">View</button>
+                                            <small class="text-muted d-block">Q1 2024</small>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <strong>Budget vs Actual</strong><br>
+                                            <small class="text-muted">Department comparison</small>
+                                        </div>
+                                        <div class="text-end">
+                                            <button class="btn btn-sm btn-outline-primary">View</button>
+                                            <small class="text-muted d-block">Nov 2023</small>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card shadow-sm border-0">
+                            <div class="card-header bg-white">
+                                <strong>Operational Reports</strong>
+                            </div>
+                            <div class="card-body">
+                                <div class="list-group list-group-flush">
+                                    <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <strong>Project Status Report</strong><br>
+                                            <small class="text-muted">Portfolio overview</small>
+                                        </div>
+                                        <div class="text-end">
+                                            <button class="btn btn-sm btn-outline-primary">View</button>
+                                            <small class="text-muted d-block">Weekly</small>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <strong>Employee Performance</strong><br>
+                                            <small class="text-muted">Quarterly reviews</small>
+                                        </div>
+                                        <div class="text-end">
+                                            <button class="btn btn-sm btn-outline-primary">View</button>
+                                            <small class="text-muted d-block">Q4 2023</small>
+                                        </div>
+                                    </a>
+                                    <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                                        <div>
+                                            <strong>Inventory Analysis</strong><br>
+                                            <small class="text-muted">Stock optimization</small>
+                                        </div>
+                                        <div class="text-end">
+                                            <button class="btn btn-sm btn-outline-primary">View</button>
+                                            <small class="text-muted d-block">Monthly</small>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scheduled Reports -->
+                <div class="card shadow-sm border-0">
                     <div class="card-header bg-white">
-                        <strong>Recent Reports</strong>
+                        <strong>Scheduled & Automated Reports</strong>
                     </div>
                     <div class="card-body">
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item d-flex justify-content-between align-items-center">
-                                Monthly Sales Report - October 2023
-                                <button class="btn btn-sm btn-outline-primary">Download</button>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between align-items-center">
-                                Employee Performance Review - Q3 2023
-                                <button class="btn btn-sm btn-outline-primary">Download</button>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between align-items-center">
-                                Inventory Status Report - October 2023
-                                <button class="btn btn-sm btn-outline-primary">Download</button>
-                            </li>
-                        </ul>
+                        <div class="row g-3">
+                            <div class="col-md-4">
+                                <div class="scheduled-report p-3 border rounded">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="bi bi-calendar-event text-primary me-2"></i>
+                                        <strong class="mb-0">Daily Sales Summary</strong>
+                                    </div>
+                                    <p class="text-muted mb-2">Automated report sent to sales team every morning at 8:00 AM</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <small class="text-success">
+                                            <i class="bi bi-check-circle me-1"></i>Active
+                                        </small>
+                                        <button class="btn btn-sm btn-outline-secondary">Configure</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="scheduled-report p-3 border rounded">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="bi bi-calendar-week text-info me-2"></i>
+                                        <strong class="mb-0">Weekly Project Status</strong>
+                                    </div>
+                                    <p class="text-muted mb-2">Comprehensive project portfolio update every Monday</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <small class="text-success">
+                                            <i class="bi bi-check-circle me-1"></i>Active
+                                        </small>
+                                        <button class="btn btn-sm btn-outline-secondary">Configure</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="scheduled-report p-3 border rounded">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <i class="bi bi-calendar-month text-warning me-2"></i>
+                                        <strong class="mb-0">Monthly Financial Report</strong>
+                                    </div>
+                                    <p class="text-muted mb-2">Complete financial analysis delivered on the 5th of each month</p>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <small class="text-success">
+                                            <i class="bi bi-check-circle me-1"></i>Active
+                                        </small>
+                                        <button class="btn btn-sm btn-outline-secondary">Configure</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -136,6 +372,13 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+        // Apply theme immediately to prevent flash
+        (function() {
+            const savedTheme = localStorage.getItem('theme') || 'light';
+            document.documentElement.setAttribute('data-theme', savedTheme);
+        })();
+    </script>
     <script>
         // Sales Chart
         const salesCtx = document.getElementById('salesChart');
