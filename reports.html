@@ -141,13 +141,44 @@
                 datasets: [{
                     label: 'Sales ($)',
                     data: [1200, 1500, 1800, 2100, 1900, 2300],
-                    backgroundColor: 'rgba(114, 20, 12, 0.6)',
-                    borderColor: '#72140C',
-                    borderWidth: 1
+                    backgroundColor: 'rgba(74, 144, 164, 0.7)',
+                    borderColor: '#4A90A4',
+                    borderWidth: 2,
+                    borderRadius: 6,
+                    borderSkipped: false
                 }]
             },
             options: {
-                scales: { y: { beginAtZero: true } }
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: '#64748B',
+                            font: {
+                                family: 'Inter',
+                                size: 12
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        grid: {
+                            color: 'rgba(74, 144, 164, 0.1)'
+                        },
+                        ticks: {
+                            color: '#64748B'
+                        }
+                    },
+                    y: {
+                        beginAtZero: true,
+                        grid: {
+                            color: 'rgba(74, 144, 164, 0.1)'
+                        },
+                        ticks: {
+                            color: '#64748B'
+                        }
+                    }
+                }
             }
         });
 
@@ -159,8 +190,26 @@
                 labels: ['Completed', 'In Progress', 'Pending'],
                 datasets: [{
                     data: [65, 25, 10],
-                    backgroundColor: ['#28a745', '#ffc107', '#dc3545']
+                    backgroundColor: ['#6B9B8A', '#7DB6C7', '#A8D8E8'],
+                    borderColor: ['#4A90A4', '#4A90A4', '#4A90A4'],
+                    borderWidth: 2,
+                    hoverOffset: 8
                 }]
+            },
+            options: {
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: '#64748B',
+                            font: {
+                                family: 'Inter',
+                                size: 12
+                            },
+                            padding: 20
+                        }
+                    }
+                },
+                cutout: '60%'
             }
         });
     </script>

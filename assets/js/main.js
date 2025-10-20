@@ -10,15 +10,44 @@ new Chart(ctx, {
     datasets: [{
       label: 'Revenue ($)',
       data: [1200, 1500, 1800, 2100, 1900, 2300],
-      borderWidth: 2,
-      borderColor: '#72140C',
-      backgroundColor: 'rgba(114, 20, 12, 0.2)',
-      tension: 0.3,
-      fill: true
+      borderWidth: 3,
+      borderColor: '#4A90A4',
+      backgroundColor: 'rgba(74, 144, 164, 0.15)',
+      tension: 0.4,
+      fill: true,
+      pointBackgroundColor: '#7DB6C7',
+      pointBorderColor: '#4A90A4',
+      pointRadius: 6,
+      pointHoverRadius: 8
     }]
   },
   options: {
-    plugins: { legend: { display: false } },
-    scales: { y: { beginAtZero: true } }
+    plugins: {
+      legend: { display: false }
+    },
+    scales: {
+      x: {
+        grid: {
+          color: 'rgba(74, 144, 164, 0.1)'
+        },
+        ticks: {
+          color: '#64748B'
+        }
+      },
+      y: {
+        beginAtZero: true,
+        grid: {
+          color: 'rgba(74, 144, 164, 0.1)'
+        },
+        ticks: {
+          color: '#64748B'
+        }
+      }
+    },
+    elements: {
+      point: {
+        hoverBorderWidth: 3
+      }
+    }
   }
 });
